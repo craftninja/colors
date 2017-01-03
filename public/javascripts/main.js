@@ -66,6 +66,7 @@ window.onload = () => {
     document.getElementById("paint4").setAttribute('style', `background-color: rgb(${paints[4]}); color: rgb(${paints[4]});`)
     document.getElementById("paint5").setAttribute('style', `background-color: rgb(${paints[5]}); color: rgb(${paints[5]});`)
     document.getElementById("paint6").setAttribute('style', `background-color: rgb(${paints[6]}); color: rgb(${paints[6]});`)
+    document.getElementById("logo").setAttribute('style', `color: rgb(${paints[6]});`)
     document.getElementById("paint7").setAttribute('style', `background-color: rgb(${paints[7]}); color: rgb(${paints[7]});`)
     document.getElementById("paint8").setAttribute('style', `background-color: rgb(${paints[8]}); color: rgb(${paints[8]});`)
     document.getElementById("paint9").setAttribute('style', `background-color: rgb(${paints[9]}); color: rgb(${paints[9]});`)
