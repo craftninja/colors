@@ -18,6 +18,34 @@ window.onload = () => {
     return element.className.includes('disabled')
   }
 
+  function getPaints(rgbMiddle) {
+    let stepsWhite = [
+      (255 - rgbMiddle[0]) / 5,
+      (255 - rgbMiddle[1]) / 5,
+      (255 - rgbMiddle[2]) / 5,
+    ]
+    let stepsBlack = [
+      rgbMiddle[0] / 5,
+      rgbMiddle[1] / 5,
+      rgbMiddle[2] / 5,
+    ]
+    return [
+      null,            // 0
+      '255, 255, 255', // 1
+      rgbMiddle.map((value, i) => Math.floor(value + stepsWhite[i] * 4)).join(), // 2
+      rgbMiddle.map((value, i) => Math.floor(value + stepsWhite[i] * 3)).join(), // 3
+      rgbMiddle.map((value, i) => Math.floor(value + stepsWhite[i] * 2)).join(), // 4
+      rgbMiddle.map((value, i) => Math.floor(value + stepsWhite[i])).join(), // 5
+      rgbMiddle.join(),       // 6
+      rgbMiddle.join(),       // 7
+      rgbMiddle.map((value, i) => Math.floor(value - stepsBlack[i])).join(), // 8
+      rgbMiddle.map((value, i) => Math.floor(value - stepsBlack[i] * 2)).join(), // 9
+      rgbMiddle.map((value, i) => Math.floor(value - stepsBlack[i] * 3)).join(), // 10
+      rgbMiddle.map((value, i) => Math.floor(value - stepsBlack[i] * 4)).join(), // 11
+      '0, 0, 0'        // 12
+    ]
+  }
+
   function updateColors () {
     document.getElementById("totalRed").innerHTML = redDrops
     document.getElementById("totalYellow").innerHTML = yellowDrops
@@ -29,8 +57,21 @@ window.onload = () => {
     if (yellowDrops == 0 && !isDisabled(removeYellow)) removeYellow.className = removeYellow.className + (' disabled')
     if (blueDrops == 0 && !isDisabled(removeBlue)) removeBlue.className = removeBlue.className + (' disabled')
     let ryb = calcRYB(redDrops, yellowDrops, blueDrops)
-    let rgb = window.ryb2rgb(ryb).join()
-    document.getElementById("paint").setAttribute('style', 'background-color: ' + `rgb(${rgb})`)
+    let rgb = window.ryb2rgb(ryb)
+    if (redDrops + yellowDrops + blueDrops == 0) rgb = [127, 127, 127]
+    let paints = getPaints(rgb)
+    document.getElementById("paint1").setAttribute('style', `background-color: rgb(${paints[1]}); color: rgb(${paints[1]});`)
+    document.getElementById("paint2").setAttribute('style', `background-color: rgb(${paints[2]}); color: rgb(${paints[2]});`)
+    document.getElementById("paint3").setAttribute('style', `background-color: rgb(${paints[3]}); color: rgb(${paints[3]});`)
+    document.getElementById("paint4").setAttribute('style', `background-color: rgb(${paints[4]}); color: rgb(${paints[4]});`)
+    document.getElementById("paint5").setAttribute('style', `background-color: rgb(${paints[5]}); color: rgb(${paints[5]});`)
+    document.getElementById("paint6").setAttribute('style', `background-color: rgb(${paints[6]}); color: rgb(${paints[6]});`)
+    document.getElementById("paint7").setAttribute('style', `background-color: rgb(${paints[7]}); color: rgb(${paints[7]});`)
+    document.getElementById("paint8").setAttribute('style', `background-color: rgb(${paints[8]}); color: rgb(${paints[8]});`)
+    document.getElementById("paint9").setAttribute('style', `background-color: rgb(${paints[9]}); color: rgb(${paints[9]});`)
+    document.getElementById("paint10").setAttribute('style', `background-color: rgb(${paints[10]}); color: rgb(${paints[10]});`)
+    document.getElementById("paint11").setAttribute('style', `background-color: rgb(${paints[11]}); color: rgb(${paints[11]});`)
+    document.getElementById("paint12").setAttribute('style', `background-color: rgb(${paints[12]}); color: rgb(${paints[12]});`)
   }
 
   addRed.onclick = () => {

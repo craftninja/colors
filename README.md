@@ -12,7 +12,7 @@ MVP:
 * ~~clicking add or remove (RYB) increments / decrements the number of color drops in the "mix"~~
 * ~~clicking Paint Mixer sets all (RYB) values to 0~~
 * ~~clicking add or remove (RYB) calculates and displays the RGB value~~
-* the displayed RGB value has a stepped gradient from black to white (as if you are mixing black and white into the mix)
+* ~~the displayed RGB value has a stepped gradient from black to white (as if you are mixing black and white into the mix)~~
 
 Maybe in the futures:
 * color-unwinder - pick a RBG color and the RYB proportions are calculated
