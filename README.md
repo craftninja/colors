@@ -1,5 +1,7 @@
 # Colors
 
+### [Paint Color Mixer](https://paint-color-mixer.herokuapp.com/)
+
 ### Why does this exist?
 
 I bought my sweet baby a set of basic fingerpaints with the primary colors red, yellow, and blue, along with white, black, and brown. After she completed her first work, I though, gosh, what terrible colors to work with. I haven't taken color theory or anything, but I do know that the primaries evenly mixed turn out to be the color of diaper contents. Online tools were unwieldy or just plain wrong. I needed a simple color mixer that helps make a more beautiful palette.
@@ -14,6 +16,12 @@ MVP:
 
 Maybe in the futures:
 * color-unwinder - pick a RBG color and the RYB proportions are calculated
+* colors related to selected color can be shown, RYB proportions are calculated (see [Adobe Kuler](https://color.adobe.com/create/color-wheel/?base=2&rule=Compound&selected=3&name=My%20Color%20Theme&mode=rgb&rgbvalues=0.15999999999999998,0.6834176349962946,0.8,0.42,0.5672112098427078,0.6,0.29999999999999993,1,0.7409090909092584,1,0.5648011363636442,0.5499999999999999,0.8,0.15999999999999998,0.4078268398264481&swatchOrder=0,1,2,3,4)])
+  * analagous
+  * monochromatic
+  * triad
+  * complementary
+  * compound?
 
 ### Get this thing up and running
 
