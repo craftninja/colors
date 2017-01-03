@@ -22,6 +22,9 @@ Maybe in the futures:
   * triad
   * complementary
   * compound?
+* user login
+* users can save and name colors (displayed with proportions of RYB)
+* users have named palettes of saved colors
 
 ### Get this thing up and running
 
