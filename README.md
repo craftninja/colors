@@ -19,3 +19,9 @@ Maybe in the futures:
 
 1. Fork, clone, npm install
 1. `$DEBUG=colors:* npm start`
+
+### Props
+
+This library is being used in the ryb -> rgb calculation.
+
+https://github.com/bahamas10/node-ryb2rgb
