@@ -30,19 +30,19 @@ window.onload = () => {
       rgbMiddle[2] / 5,
     ]
     return [
-      null,            // 0
-      '255, 255, 255', // 1
-      rgbMiddle.map((value, i) => Math.floor(value + stepsWhite[i] * 4)).join(), // 2
-      rgbMiddle.map((value, i) => Math.floor(value + stepsWhite[i] * 3)).join(), // 3
-      rgbMiddle.map((value, i) => Math.floor(value + stepsWhite[i] * 2)).join(), // 4
-      rgbMiddle.map((value, i) => Math.floor(value + stepsWhite[i])).join(), // 5
-      rgbMiddle.join(),       // 6
-      rgbMiddle.join(),       // 7
-      rgbMiddle.map((value, i) => Math.floor(value - stepsBlack[i])).join(), // 8
-      rgbMiddle.map((value, i) => Math.floor(value - stepsBlack[i] * 2)).join(), // 9
-      rgbMiddle.map((value, i) => Math.floor(value - stepsBlack[i] * 3)).join(), // 10
-      rgbMiddle.map((value, i) => Math.floor(value - stepsBlack[i] * 4)).join(), // 11
-      '0, 0, 0'        // 12
+      null,
+      '255, 255, 255',
+      rgbMiddle.map((value, i) => Math.floor(value + stepsWhite[i] * 4)).join(),
+      rgbMiddle.map((value, i) => Math.floor(value + stepsWhite[i] * 3)).join(),
+      rgbMiddle.map((value, i) => Math.floor(value + stepsWhite[i] * 2)).join(),
+      rgbMiddle.map((value, i) => Math.floor(value + stepsWhite[i])).join(),
+      rgbMiddle.join(),
+      rgbMiddle.join(),
+      rgbMiddle.map((value, i) => Math.floor(value - stepsBlack[i])).join(),
+      rgbMiddle.map((value, i) => Math.floor(value - stepsBlack[i] * 2)).join(),
+      rgbMiddle.map((value, i) => Math.floor(value - stepsBlack[i] * 3)).join(),
+      rgbMiddle.map((value, i) => Math.floor(value - stepsBlack[i] * 4)).join(),
+      '0, 0, 0'
     ]
   }
 
