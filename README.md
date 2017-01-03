@@ -7,9 +7,9 @@ I bought my sweet baby a set of basic fingerpaints with the primary colors red, 
 ### What do you want to do with this thing?
 
 MVP:
-* clicking add or remove (RYB) increments / decrements the number of color drops in the "mix"
+* ~~clicking add or remove (RYB) increments / decrements the number of color drops in the "mix"~~
 * clicking reset sets all (RYB) values to 0
-* clicking add or remove (RYB) calculates and displays the RGB value
+* ~~clicking add or remove (RYB) calculates and displays the RGB value~~
 * the displayed RGB value has a stepped gradient from black to white (as if you are mixing black and white into the mix)
 
 Maybe in the futures:

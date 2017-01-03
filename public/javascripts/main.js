@@ -8,6 +8,12 @@ window.onload = () => {
 
   let redDrops = 0, yellowDrops = 0, blueDrops = 0;
 
+  function calcRYB(red, yellow, blue) {
+    let max = Math.max(red, yellow, blue) || 1
+    let proportions = [red/max*255, yellow/max*255, blue/max*255]
+    return proportions
+  }
+
   function isDisabled(element) {
     return element.className.includes('disabled')
   }
@@ -22,6 +28,9 @@ window.onload = () => {
     if (redDrops == 0 && !isDisabled(removeRed)) removeRed.className = removeRed.className + (' disabled')
     if (yellowDrops == 0 && !isDisabled(removeYellow)) removeYellow.className = removeYellow.className + (' disabled')
     if (blueDrops == 0 && !isDisabled(removeBlue)) removeBlue.className = removeBlue.className + (' disabled')
+    let ryb = calcRYB(redDrops, yellowDrops, blueDrops)
+    let rgb = window.ryb2rgb(ryb).join()
+    document.getElementById("paint").setAttribute('style', 'background-color: ' + `rgb(${rgb})`)
   }
 
   addRed.onclick = () => {
