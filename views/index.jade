@@ -33,9 +33,22 @@ block content
         a(class='btn-floating btn-large waves-effect waves-light yellow darken-1' id='addYellow')
           i(class='material-icons') add
         p#totalYellow 0
+        i.col.s12.material-icons#addToPalette palette
       .col.s12.m12.l4.center
         a(class='btn-floating btn-large waves-effect waves-light blue lighten-1 disabled' id='removeBlue')
           i(class='material-icons') remove
         a(class='btn-floating btn-large waves-effect waves-light blue darken-3' id='addBlue')
           i(class='material-icons') add
         p#totalBlue 0
+    .row
+      table.centered
+        tbody#palette
+          tr(style='display: none;')
+            td
+              a.waves-effect.waves-light.btn-large
+            td
+              a.center.btn-floating.btn-large.waves-effect.waves-light.red#addRed
+            td
+              a.btn-floating.btn-large.waves-effect.waves-light.yellow.darken-1#addYellow
+            td
+              a.btn-floating.btn-large.waves-effect.waves-light.blue.darken-3#addBlue
