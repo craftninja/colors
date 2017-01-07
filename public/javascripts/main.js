@@ -1,14 +1,14 @@
 window.onload = () => {
-  const addRed = document.getElementById('addRed');
-  const removeRed = document.getElementById('removeRed');
-  const addYellow = document.getElementById('addYellow');
-  const removeYellow = document.getElementById('removeYellow');
-  const addBlue = document.getElementById('addBlue');
-  const removeBlue = document.getElementById('removeBlue');
-  const addToPalette = document.getElementById('addToPalette');
-  const removeFromPalette = document.getElementById('palette');
+  const addRed = document.getElementById('addRed')
+  const removeRed = document.getElementById('removeRed')
+  const addYellow = document.getElementById('addYellow')
+  const removeYellow = document.getElementById('removeYellow')
+  const addBlue = document.getElementById('addBlue')
+  const removeBlue = document.getElementById('removeBlue')
+  const addToPalette = document.getElementById('addToPalette')
+  const removeFromPalette = document.getElementById('palette')
 
-  let redDrops = 0, yellowDrops = 0, blueDrops = 0;
+  let redDrops = 0, yellowDrops = 0, blueDrops = 0
 
   function calcRYB(red, yellow, blue) {
     let max = Math.max(red, yellow, blue) || 1
@@ -89,27 +89,27 @@ window.onload = () => {
   addRed.onclick = () => {
     redDrops += 1
     updateColors()
-  };
+  }
   removeRed.onclick = () => {
     if (redDrops > 0) redDrops -= 1
     updateColors()
-  };
+  }
   addYellow.onclick = () => {
     yellowDrops += 1
     updateColors()
-  };
+  }
   removeYellow.onclick = () => {
     if (yellowDrops > 0) yellowDrops -= 1
     updateColors()
-  };
+  }
   addBlue.onclick = () => {
     blueDrops += 1
     updateColors()
-  };
+  }
   removeBlue.onclick = () => {
     if (blueDrops > 0) blueDrops -= 1
     updateColors()
-  };
+  }
   addToPalette.onclick = () => {
     if (redDrops + yellowDrops + blueDrops !== 0) {
       let newRow = document.getElementById('palette').firstChild.cloneNode(true)
