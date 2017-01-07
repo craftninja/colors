@@ -1,11 +1,11 @@
 window.onload = () => {
-  const addRed = document.getElementById("addRed");
-  const removeRed = document.getElementById("removeRed");
-  const addYellow = document.getElementById("addYellow");
-  const removeYellow = document.getElementById("removeYellow");
-  const addBlue = document.getElementById("addBlue");
-  const removeBlue = document.getElementById("removeBlue");
-  const addToPalette = document.getElementById("addToPalette");
+  const addRed = document.getElementById('addRed');
+  const removeRed = document.getElementById('removeRed');
+  const addYellow = document.getElementById('addYellow');
+  const removeYellow = document.getElementById('removeYellow');
+  const addBlue = document.getElementById('addBlue');
+  const removeBlue = document.getElementById('removeBlue');
+  const addToPalette = document.getElementById('addToPalette');
   const removeFromPalette = document.getElementById('palette');
 
   let redDrops = 0, yellowDrops = 0, blueDrops = 0;
@@ -49,9 +49,9 @@ window.onload = () => {
   }
 
   function updateColors () {
-    document.getElementById("totalRed").innerHTML = redDrops
-    document.getElementById("totalYellow").innerHTML = yellowDrops
-    document.getElementById("totalBlue").innerHTML = blueDrops
+    document.getElementById('totalRed').innerHTML = redDrops
+    document.getElementById('totalYellow').innerHTML = yellowDrops
+    document.getElementById('totalBlue').innerHTML = blueDrops
     if (redDrops == 1 && isDisabled(removeRed)) removeRed.className = removeRed.className.split('disabled').join('')
     if (yellowDrops == 1 && isDisabled(removeYellow)) removeYellow.className = removeYellow.className.split('disabled').join('')
     if (blueDrops == 1 && isDisabled(removeBlue)) removeBlue.className = removeBlue.className.split('disabled').join('')
@@ -64,22 +64,22 @@ window.onload = () => {
       window.rgb = [127, 127, 127]
       addToPalette.className = addToPalette.className + ' disabled'
     } else if (redDrops + yellowDrops + blueDrops == 1) {
-      if ( document.getElementById("logo") ) document.getElementById("logo").remove()
+      if ( document.getElementById('logo') ) document.getElementById('logo').remove()
       if ( isDisabled(addToPalette) ) addToPalette.className = addToPalette.className.split(' disabled').join('')
     }
     let paints = getPaints(window.rgb)
-    document.getElementById("paint1").setAttribute('style', `background-color: rgb(${paints[1]}); color: rgb(${paints[1]});`)
-    document.getElementById("paint2").setAttribute('style', `background-color: rgb(${paints[2]}); color: rgb(${paints[2]});`)
-    document.getElementById("paint3").setAttribute('style', `background-color: rgb(${paints[3]}); color: rgb(${paints[3]});`)
-    document.getElementById("paint4").setAttribute('style', `background-color: rgb(${paints[4]}); color: rgb(${paints[4]});`)
-    document.getElementById("paint5").setAttribute('style', `background-color: rgb(${paints[5]}); color: rgb(${paints[5]});`)
-    document.getElementById("paint6").setAttribute('style', `background-color: rgb(${paints[6]}); color: rgb(${paints[6]});`)
-    document.getElementById("paint7").setAttribute('style', `background-color: rgb(${paints[7]}); color: rgb(${paints[7]});`)
-    document.getElementById("paint8").setAttribute('style', `background-color: rgb(${paints[8]}); color: rgb(${paints[8]});`)
-    document.getElementById("paint9").setAttribute('style', `background-color: rgb(${paints[9]}); color: rgb(${paints[9]});`)
-    document.getElementById("paint10").setAttribute('style', `background-color: rgb(${paints[10]}); color: rgb(${paints[10]});`)
-    document.getElementById("paint11").setAttribute('style', `background-color: rgb(${paints[11]}); color: rgb(${paints[11]});`)
-    document.getElementById("paint12").setAttribute('style', `background-color: rgb(${paints[12]}); color: rgb(${paints[12]});`)
+    document.getElementById('paint1').setAttribute('style', `background-color: rgb(${paints[1]}); color: rgb(${paints[1]});`)
+    document.getElementById('paint2').setAttribute('style', `background-color: rgb(${paints[2]}); color: rgb(${paints[2]});`)
+    document.getElementById('paint3').setAttribute('style', `background-color: rgb(${paints[3]}); color: rgb(${paints[3]});`)
+    document.getElementById('paint4').setAttribute('style', `background-color: rgb(${paints[4]}); color: rgb(${paints[4]});`)
+    document.getElementById('paint5').setAttribute('style', `background-color: rgb(${paints[5]}); color: rgb(${paints[5]});`)
+    document.getElementById('paint6').setAttribute('style', `background-color: rgb(${paints[6]}); color: rgb(${paints[6]});`)
+    document.getElementById('paint7').setAttribute('style', `background-color: rgb(${paints[7]}); color: rgb(${paints[7]});`)
+    document.getElementById('paint8').setAttribute('style', `background-color: rgb(${paints[8]}); color: rgb(${paints[8]});`)
+    document.getElementById('paint9').setAttribute('style', `background-color: rgb(${paints[9]}); color: rgb(${paints[9]});`)
+    document.getElementById('paint10').setAttribute('style', `background-color: rgb(${paints[10]}); color: rgb(${paints[10]});`)
+    document.getElementById('paint11').setAttribute('style', `background-color: rgb(${paints[11]}); color: rgb(${paints[11]});`)
+    document.getElementById('paint12').setAttribute('style', `background-color: rgb(${paints[12]}); color: rgb(${paints[12]});`)
   }
 
   function removeColorRow (button) {
