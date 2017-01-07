@@ -61,8 +61,10 @@ window.onload = () => {
     window.rgb = window.ryb2rgb(ryb)
     if (redDrops + yellowDrops + blueDrops == 0) {
       window.rgb = [127, 127, 127]
+      addToPalette.className = addToPalette.className + ' disabled'
     } else if (redDrops + yellowDrops + blueDrops == 1) {
       if ( document.getElementById("logo") ) document.getElementById("logo").remove()
+      if ( isDisabled(addToPalette) ) addToPalette.className = addToPalette.className.split(' disabled').join('')
     }
     let paints = getPaints(window.rgb)
     document.getElementById("paint1").setAttribute('style', `background-color: rgb(${paints[1]}); color: rgb(${paints[1]});`)
