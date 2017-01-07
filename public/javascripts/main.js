@@ -5,7 +5,8 @@ window.onload = () => {
   const removeYellow = document.getElementById("removeYellow");
   const addBlue = document.getElementById("addBlue");
   const removeBlue = document.getElementById("removeBlue");
-  const addToPalette = document.getElementById("addToPalette")
+  const addToPalette = document.getElementById("addToPalette");
+  const removeFromPalette = document.getElementById('palette');
 
   let redDrops = 0, yellowDrops = 0, blueDrops = 0;
 
@@ -81,6 +82,10 @@ window.onload = () => {
     document.getElementById("paint12").setAttribute('style', `background-color: rgb(${paints[12]}); color: rgb(${paints[12]});`)
   }
 
+  function removeColorRow (button) {
+    button.target.parentNode.parentNode.parentNode.remove()
+  }
+
   addRed.onclick = () => {
     redDrops += 1
     updateColors()
@@ -109,11 +114,16 @@ window.onload = () => {
     if (redDrops + yellowDrops + blueDrops !== 0) {
       let newRow = document.getElementById('palette').firstChild.cloneNode(true)
       newRow.removeAttribute('style')
-      newRow.childNodes[0].firstChild.setAttribute('style', `background-color: rgb(${window.rgb.join()});`)
+      newRow.childNodes[0].childNodes[1].setAttribute('style', `background-color: rgb(${window.rgb.join()});`)
       newRow.childNodes[1].firstChild.innerHTML = redDrops
       newRow.childNodes[2].firstChild.innerHTML = yellowDrops
       newRow.childNodes[3].firstChild.innerHTML = blueDrops
       document.getElementById('palette').append(newRow)
+    }
+  }
+  removeFromPalette.onclick = (button) => {
+    if (button.target.className.includes('deleteFromPalette')) {
+      removeColorRow (button)
     }
   }
 }
